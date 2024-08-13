@@ -12,8 +12,7 @@ class InferlessPythonModel:
                                 filename="tinyllama-1.1b-chat-v1.0.Q4_0.gguf",
                                 local_dir=nfs_volume)
         self.llm = LLM(model=f"{nfs_volume}/tinyllama-1.1b-chat-v1.0.Q4_0.gguf",
-                  tokenizer="TinyLlama/TinyLlama-1.1B-Chat-v1.0",
-                  gpu_memory_utilization=0.95)
+                  tokenizer="TinyLlama/TinyLlama-1.1B-Chat-v1.0")
         
     def infer(self, inputs):
         prompt = inputs["prompt"]
